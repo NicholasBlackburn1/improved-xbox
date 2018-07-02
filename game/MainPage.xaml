@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Image Source="Assets/splashlogo.jpg" HorizontalAlignment="Left" Margin = "277,10,0,0" VerticalAlignment="Top" Height="290" Width="1411"/>
+        <Image Source="Assets/splashlogo.jpg" HorizontalAlignment="Center" Margin = "0,10,0,0" VerticalAlignment="Top" Height="332" Width="709" />
         <Button Name="button"  Click="button_Click" Content="Welcome_Guide" HorizontalAlignment="Left" Margin = "156,390,0,0" VerticalAlignment="Top"/>
         <Button Name="button2" Click="button2_Click" Content="welcome_video" HorizontalAlignment="Right" Margin = "0,390,148,0" VerticalAlignment="Top"/>
         <Button Name="button3" Click="button3_Click" Content="Weclome_page"  HorizontalAlignment="Center" Margin = "0,390,0,0" VerticalAlignment="Top"/>
