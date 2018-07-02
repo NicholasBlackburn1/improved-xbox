@@ -13,6 +13,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using MyToolkit.Media;
+using MyToolkit.Multimedia;
+using System.Threading.Tasks;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -26,6 +28,7 @@ namespace game
         public MainPage()
         {
             this.InitializeComponent();
+            
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -35,15 +38,24 @@ namespace game
 
         private async void button2_Click(object sender, RoutedEventArgs e)
         {
-            Uri _videoUri = await GetYoutubeUri("UO-8CMdeSHA");
+            async Task<Uri> GetYoutubeUri(string bzJDimvPW1Y)
+            {
+                YouTubeUri uri = await YouTube.GetVideoUriAsync(bzJDimvPW1Y, YouTubeQuality.Quality1080P);
+                return uri.Uri;
+            }
+            Uri _videoUri = await GetYoutubeUri("bzJDimvPW1Y");
             if (_videoUri != null)
             {
                 player.Source = _videoUri;
                 player.Play();
             }
+
+
+
+
         }
 
-        private void button3_Click(object sender, RoutedEventArgs e)
+        private void Button3_Click(object sender, RoutedEventArgs e)
         {
 
         }
