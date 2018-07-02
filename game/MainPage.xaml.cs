@@ -28,7 +28,7 @@ namespace game
         public MainPage()
         {
             this.InitializeComponent();
-            
+
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -38,26 +38,45 @@ namespace game
 
         private async void button2_Click(object sender, RoutedEventArgs e)
         {
-            async Task<Uri> GetYoutubeUri(string jItnCGRsMjw)
+
+
             {
-                YouTubeUri uri = await YouTube.GetVideoUriAsync(jItnCGRsMjw, YouTubeQuality.Quality1080P);
-                return uri.Uri;
+                void DelayAction(int millisecond, Action action)
+                {
+                    var timer = new DispatcherTimer();
+                    timer.Tick += delegate
+
+                    {
+                        action.Invoke();
+                        timer.Stop();
+                    };
+
+                    timer.Interval = TimeSpan.FromMilliseconds(500);
+                    timer.Start();
+
+
+                }
+                async Task<Uri> GetYoutubeUri(string jItnCGRsMjw)
+                {
+                    YouTubeUri uri = await YouTube.GetVideoUriAsync(jItnCGRsMjw, YouTubeQuality.Quality1080P);
+                    return uri.Uri;
+                }
+                Uri _videoUri = await GetYoutubeUri("jItnCGRsMjw");
+                if (_videoUri != null)
+                {
+                    player.Source = _videoUri;
+                    player.Play();
+                }
+
             }
-            Uri _videoUri = await GetYoutubeUri("jItnCGRsMjw");
-            if (_videoUri != null)
+
+
+            }
+
+            private void Button3_Click(object sender, RoutedEventArgs e)
             {
-                player.Source = _videoUri;
-                player.Play();
+
             }
-
-
-
-
-        }
-
-        private void Button3_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
-}
+
