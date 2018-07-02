@@ -32,33 +32,14 @@ namespace game
 
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private async void button_Click(object sender, RoutedEventArgs e)
         {
-
+            var messageDialog = new MessageDialog("tap A if your ready tap b if your not ");
+            await messageDialog.ShowAsync();
         }
 
         private async void button2_Click(object sender, RoutedEventArgs e)
         {
-
-
-            {
-                void DelayAction(int millisecond, Action action)
-                {
-
-
-                    var timer = new DispatcherTimer();
-                    timer.Tick += delegate
-
-                    {
-                        action.Invoke();
-                        timer.Stop();
-                    };
-
-                    timer.Interval = TimeSpan.FromMilliseconds(500);
-                    timer.Start();
-
-
-                }
                 async Task<Uri> GetYoutubeUri(string jItnCGRsMjw)
                 {
                     YouTubeUri uri = await YouTube.GetVideoUriAsync(jItnCGRsMjw, YouTubeQuality.Quality1080P);
