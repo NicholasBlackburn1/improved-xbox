@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="game.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:game"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Image Source="Assets/splashlogo.jpg" HorizontalAlignment="Left" Margin = "277,10,0,0" VerticalAlignment="Top" Height="290" Width="1411"/>
+        <Button Name="button"  Click="button_Click" Content="Welcome_Guide" HorizontalAlignment="Left" Margin = "156,390,0,0" VerticalAlignment="Top"/>
+        <Button Name="button2" Click="button2_Click" Content="welcome_video" HorizontalAlignment="Right" Margin = "0,390,148,0" VerticalAlignment="Top"/>
+        <Button Name="button3" Click="button3_Click" Content="Weclome_page"  HorizontalAlignment="Center" Margin = "0,390,0,0" VerticalAlignment="Top"/>
+        <MediaElement Name="player" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" AreTransportControlsEnabled="False" />
+        <MediaElement Name="music" AutoPlay="True" />
+
+
+    </Grid>
+</Page>
