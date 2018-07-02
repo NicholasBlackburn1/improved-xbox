@@ -38,12 +38,12 @@ namespace game
 
         private async void button2_Click(object sender, RoutedEventArgs e)
         {
-            async Task<Uri> GetYoutubeUri(string ZPqZyIKtW0Y)
+            async Task<Uri> GetYoutubeUri(string jItnCGRsMjw)
             {
-                YouTubeUri uri = await YouTube.GetVideoUriAsync(ZPqZyIKtW0Y, YouTubeQuality.Quality1080P);
+                YouTubeUri uri = await YouTube.GetVideoUriAsync(jItnCGRsMjw, YouTubeQuality.Quality1080P);
                 return uri.Uri;
             }
-            Uri _videoUri = await GetYoutubeUri("ZPqZyIKtW0Y");
+            Uri _videoUri = await GetYoutubeUri("jItnCGRsMjw");
             if (_videoUri != null)
             {
                 player.Source = _videoUri;
