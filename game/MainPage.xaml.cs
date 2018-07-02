@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Navigation;
 using MyToolkit.Media;
 using MyToolkit.Multimedia;
 using System.Threading.Tasks;
+using Windows.UI.Popups;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -43,6 +44,8 @@ namespace game
             {
                 void DelayAction(int millisecond, Action action)
                 {
+
+
                     var timer = new DispatcherTimer();
                     timer.Tick += delegate
 
