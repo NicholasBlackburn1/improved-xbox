@@ -12,7 +12,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using MyToolkit.Media;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -33,14 +32,9 @@ namespace game
 
         }
 
-        private async void button2_Click(object sender, RoutedEventArgs e)
+        private void button2_Click(object sender, RoutedEventArgs e)
         {
-            Uri _videoUri = await GetYoutubeUri("UO-8CMdeSHA");
-            if (_videoUri != null)
-            {
-                player.Source = _videoUri;
-                player.Play();
-            }
+
         }
 
         private void button3_Click(object sender, RoutedEventArgs e)
