@@ -1,4 +1,5 @@
-![Cat](https://raw.githubusercontent.com/NicholasBlackburn1/improved-xbox/logo.png)
+
+![logo](https://i1.sndcdn.com/avatars-000199009746-9q49y2-t500x500.jpg)
 # improved-xbox
-# My first xbox/ uwp app
-# runs on xbox one /windows 10 
+# my first uwp app for xbox and windows
+# written in c#
