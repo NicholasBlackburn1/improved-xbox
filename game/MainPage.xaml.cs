@@ -57,10 +57,8 @@ namespace game
 
             }
 
-            private void Button3_Click(object sender, RoutedEventArgs e)
-            {
-
-            }
+            
         }
-    }
+    
+
 
